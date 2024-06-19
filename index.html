@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Totus travel</title>
+
+
+
+    <link rel="stylesheet" href="css/tailwind.css">
+
+    <link rel="stylesheet" href="css/ysf3wph.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&amp;display=swap"
+        rel="stylesheet">
+
+
+    <script src="https://kit.fontawesome.com/6faef96c61.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body class="text-black">
+    <div id="app" class="">
+        <nav-search ref="search"></nav-search>
+        <!--<flash-message success=""></flash-message>-->
+
+        <main id="main" class="home">
+
+            <!-- <<<<<<<<<<<<<<<<<<<<<BANNER>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+
+
+            <nav class="print:hidden w-full px-4 z-50 at-top" id="top-nav" ref="top-nav" x-data="{ mobile_open: false }"
+                x-bind:class="{'mobile-open': mobile_open }">
+                <div class="max-w-6xl 2xl:max-w-8xl flex items-center justify-between mx-auto print:hidden relative">
+                    <!--LOGOOOOOOOOOOO-->
+                    <a id="logo" href="index.html" class="relative z-50">
+                        <span
+                            class="font-brush font-normal antialiased text-transparent leading-none py-1 bg-clip-text bg-gradient-to-r from-pink-hot to-purple-new">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </span>
+                        <span
+                            class="font-brush font-normal antialiased text-transparent leading-none py-1 bg-clip-text bg-gradient-to-r from-pink-hot to-purple-new">TOTUS
+                            TRAVEL</span>
+
+                    </a>
+
+                    <button class="md:hidden print:hidden p-2 outline-none z-10" x-show="! mobile_open"
+                        x-on:click="mobile_open = true">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 30 30" width="30" height="30">
+                            <g transform="matrix(1.25,0,0,1.25,0,0)">
+                                <path d="M2.25 18.003L21.75 18.003" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                <path d="M2.25 12.003L21.75 12.003" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                <path d="M2.25 6.003L21.75 6.003" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="md:hidden print:hidden p-2 outline-none text-black"
+                        x-bind:class="{ 'text-white': !mobile_open, 'text-black': mobile_open }" x-show="mobile_open"
+                        x-on:click="mobile_open = false">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                            viewBox="0 0 30 30" width="30" height="30">
+                            <g transform="matrix(1.25,0,0,1.25,0,0)">
+                                <path d="M0.75 23.249L23.25 0.749" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                <path d="M23.25 23.249L0.75 0.749" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                            </g>
+                        </svg>
+                    </button>
+
+
+                    <!--NAVBAR LINKS-->
+                    <div class="md:flex links px-4 md:px-0 pb-8 md:pb-0 print:hidden h-full">
+                        <ul class="font-mono font-bold text-sm flex md:items-center space-y-2 md:space-y-0">
+                            <li class="group">
+                                <a class="nav-item" href="#hero">
+                                    <span class="md:flex md:h-full items-center group-hover:text-pink">
+                                        Home
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a class="nav-item " href="chi siamo.html">
+                                    <span class="md:flex md:h-full items-center group-hover:text-pink">
+                                        Chi siamo
+                                    </span>
+                                </a>
+                            </li>
+                            <!--
+                            <li class="group">
+                                <a class="nav-item " href="">
+                                    <span class="md:flex md:h-full items-center group-hover:text-pink">
+                                        Contattaci
+                                    </span>
+                                </a>
+                            </li>
+                            -->
+                            <li class="  lg:block ">
+                                <a href="#modulo" class="md:ml-4 relative z-10 button button-white">Viaggia Low
+                                    Cost!</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <article x-data="{ adventure: 'devs' }"
+                class="relative overflow-hidden w-full -top-15 md:-top-40 lg:-top-24" id="hero">
+                <header class="bg-[#1B1A21] text-white pt-36 md:pt-24 pb-36 lg:pb-80 mb-[100px] relative">
+                    <div class="flex items-end max-w-5xl px-4 xl:pl-0 mx-auto pb-12">
+                        <div class="md:w-[60%] relative z-10">
+                            <h1
+                                class="font-black leading-none text-center md:text-left text-5xl md:text-6xl lg:text-7xl tracking-tight md:pr-24">
+                                Viaggia come un <span
+                                    class="font-brush font-normal antialiased text-transparent leading-none py-1 bg-clip-text bg-gradient-to-r from-pink-hot to-purple-new">Milionario</span>
+                            </h1>
+                            <p class="my-16 font-hand text-2xl text-mint antialiased text-center md:text-left">
+                                Niente stress, solo relax. Da dove prendere il bus? Come raggiungere il centro? Non impazzire a trovare voli, hotel e combinazioni perfette. Totus Travel ti offre la soluzione migliore per un viaggio organizzato a 360 gradi al prezzo più <b>basso!</b>
+                            </p>
+
+                            <!-- PUNTO D'INTERESSE BOTTONI-->
+                            <div class="flex justify-center md:justify-start space-x-6">
+                                <a href="#modulo" class="button-xl button-white">Vai al modulo!</a>
+                                <a href="chi siamo.html" class="hidden md:block button-xl button-teal">Scopri chi siamo</a>
+                            </div>
+                        </div>
+
+                        <!--HERO IMAGE-->
+                        <buckshot-player>
+                            <img src="images/tour.png" alt="Tour Eiffel"
+                                class="cursor-pointer active:scale-[.98] hidden md:block w-[510px] max-w-none">
+                        </buckshot-player>
+                    </div>
+
+
+                    <div class="bg-paper-tear -bottom-24 absolute flip-y"></div>
+                </header>
+
+
+
+
+                <!-- PUNTO D'INTERESSE PER TITOLI-->
+
+                <!--
+                <div id="master-license" class="max-w-xl mx-auto px-2 relative mt-4 pb-32">
+                    <div class="bg-white border p-8 w-full relative rounded-sm stack text-black z-10 markdown">
+                        <h3 class="mt-0">Do you offer discounts for non-profits or educational institutions?</h3>
+                        <p>Yes we do. We are happy to offer verified non-profits, school, and universities a 20%
+                            discount on all first-party products (except the Master License), including annual renewals.
+                            You can email <a href="mailto:support@statamic.com">support@statamic.com</a> to get the
+                            process started.</p>
+                        <h3>Can I build a site for a client and transfer the license to them later?</h3>
+                        <p>Absolutely. It's a common situation and we believe that <mark>website owners should also own
+                                their Statamic license</mark>. Just send us a <a href="/support">support request</a> and
+                            we'll take care of it.</p>
+                        <h3>What is Basic Developer Support?</h3>
+                        <p>From our developers to you or yours, we'll answer your "how do I" and "is it possible" type
+                            questions via email within 2-3 business days. For those in need of guaranteed response times
+                            or more in depth answers, we recommend a <a
+                                href="mailto:support@statamic.com?subject=Tell me about premium support">premium support
+                                plan</a>.</p>
+                        <h3>Can I use Statamic Solo for client work?</h3>
+                        <p>While we did not intend for it to be used this way, we know it will happen anyway.</p>
+                        <p></p>
+                        <p>To put it on record, Solo is meant for developers to use on their own personal sites, a
+                            hobby/side project, a labor of love for a friend, and ultimately fall in love with Statamic.
+                            We don't recommend giving non-developers super admin access and, for even that reason alone,
+                            strongly encourage you to purchase Statamic Pro.</p>
+                        <h3>Can I upgrade to the Master License once I own 5 licenses?</h3>
+                        <p>Nope. The reason there's a discount is that you're buying in bulk. The first 5 licenses are
+                            10% off, and all additional ones are 25% for year. That's a great deal.</p>
+                        <h3>How long are licenses from the Master License valid?</h3>
+                        <p>The activations of the initial batch of five you get with the purchase of the Master Licenses
+                            are delayed - either until the license is assigned to a site or, automatically, six months
+                            after the Master License was purchased, whichever comes first. If you buy any additional
+                            licenses with the 25% discount during the first year they get activated the day of their
+                            respective purchase.</p>
+                    </div> <svg viewBox="0 0 186 178" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        class="absolute -left-16 top-96 h-40 w-40 hidden lg:block z-0">
+                        <defs>
+                            <path id="a" d="M.23.405H86.4V6H.23z"></path>
+                            <path id="c" d="M.463.441h80.185v5.454H.463z"></path>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd">
+                            <path
+                                d="M107.425 94H0c.06 1.668.193 3.334.373 5h185.249c.182-1.662.314-3.328.378-5h-78.575zM106.94 159H31a90.501 90.501 0 007.04 5h109.887a92.68 92.68 0 007.073-5h-48.061zM107.44 133H11a81.227 81.227 0 003.243 5H172.805a79.424 79.424 0 003.195-5h-68.561zM107.457 106H2c.339 1.674.757 3.34 1.218 5h180.568a72.225 72.225 0 001.214-5h-77.544zM107.473 146H19a86.33 86.33 0 004.672 5H163.26a84.626 84.626 0 004.741-5h-60.527zM107.516 120H5a75.06 75.06 0 002.16 5h172.704a75.365 75.365 0 002.136-5h-74.484z"
+                                fill="currentColor"></path>
+                            <g transform="translate(50 172)">
+                                <mask id="b" fill="#fff">
+                                    <use xlink:href="#a"></use>
+                                </mask>
+                                <path
+                                    d="M57.325.405H.231a94.875 94.875 0 0013.582 5.596H72.914A94.233 94.233 0 0086.4.405H57.325z"
+                                    fill="currentColor" mask="url(#b)"></path>
+                            </g>
+                            <path d="M107.52 32H167a86.714 86.714 0 00-4.911-5H24.882A84.01 84.01 0 0020 32h87.519z"
+                                fill="currentColor"></path>
+                            <g transform="translate(53)">
+                                <mask id="d" fill="#fff">
+                                    <use xlink:href="#c"></use>
+                                </mask>
+                                <path
+                                    d="M54.455 5.895H80.648A95.992 95.992 0 0065.388.439H15.575A94.989 94.989 0 00.463 5.895h53.992z"
+                                    fill="currentColor" mask="url(#d)"></path>
+                            </g>
+                            <path
+                                d="M107.435 19H154a91.912 91.912 0 00-7.394-5H40.419c-.3.185-.61.351-.91.536A93.833 93.833 0 0033 19H107.436zM106.966 85H186a71.113 71.113 0 00-.442-5H.446A70.812 70.812 0 000 85h106.966zM106.99 59H181a74.543 74.543 0 00-2.239-5H7.21A75.397 75.397 0 005 59h101.99zM107.471 72H185c-.372-1.674-.8-3.34-1.295-5H3.286A73.91 73.91 0 002 72h105.471zM106.99 45H175a81.26 81.26 0 00-3.345-5H14.368A79.14 79.14 0 0011 45h95.99z"
+                                fill="currentColor"></path>
+                        </g>
+                    </svg> <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg"
+                        class="absolute -right-24 top-32 hidden lg:block">
+                        <g fill="#001207" fill-rule="evenodd">
+                            <path
+                                d="M4.052 9.105c1.511 5.166 7.336 10.01 12.985 10.796 1.318.183 2.548.137 3.638-.125l-1.324 1.76c-1.115 1.48-3.224 2.126-5.788 1.768-5.119-.713-10.39-5.08-11.751-9.732-.557-1.901-.362-3.613.547-4.821l1.329-1.765c.03.68.151 1.391.364 2.119M20.55 22.438l3.679-4.886.002-.003a.75.75 0 10-1.198-.902l-.003.003c-1.115 1.478-3.224 2.122-5.785 1.766-5.12-.714-10.39-5.08-11.752-9.732-.556-1.902-.362-3.614.548-4.822A.75.75 0 004.84 2.96l-.002.003L1.161 7.85C-.041 9.444-.32 11.626.372 13.993c1.511 5.166 7.336 10.01 12.984 10.797.532.074 1.05.11 1.55.11 2.43 0 4.439-.863 5.643-2.462">
+                            </path>
+                            <path
+                                d="M4.052 9.105c1.511 5.166 7.336 10.01 12.985 10.796 1.318.183 2.548.137 3.638-.125l-1.324 1.76c-1.115 1.48-3.224 2.126-5.788 1.768-5.119-.713-10.39-5.08-11.751-9.732-.557-1.901-.362-3.613.547-4.821l1.329-1.765c.03.68.151 1.391.364 2.119M20.55 22.438l3.679-4.886.002-.003a.75.75 0 10-1.198-.902l-.003.003c-1.115 1.478-3.224 2.122-5.785 1.766-5.12-.714-10.39-5.08-11.752-9.732-.556-1.902-.362-3.614.548-4.822A.75.75 0 004.84 2.96l-.002.003L1.161 7.85C-.041 9.444-.32 11.626.372 13.993c1.511 5.166 7.336 10.01 12.984 10.797.532.074 1.05.11 1.55.11 2.43 0 4.439-.863 5.643-2.462">
+                            </path>
+                            <path
+                                d="M11.828 2.094c5.118.713 10.39 5.079 11.751 9.732.592 2.023.338 3.81-.716 5.03-1.148 1.329-3.195 1.898-5.62 1.56-5.118-.714-10.39-5.08-11.751-9.732-.592-2.024-.338-3.81.716-5.03C7.138 2.576 8.66 2 10.496 2c.428 0 .873.031 1.332.095m12.17 15.742c1.398-1.619 1.76-3.903 1.02-6.431-1.51-5.166-7.335-10.01-12.983-10.797C9.098.201 6.56.952 5.073 2.674c-1.398 1.618-1.76 3.902-1.02 6.43 1.51 5.167 7.335 10.01 12.984 10.797.525.073 1.037.11 1.532.11 2.278 0 4.208-.761 5.43-2.175">
+                            </path>
+                        </g>
+                    </svg> <svg width="54px" height="50px" viewBox="0 0 54 50" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        class="absolute -right-40 top-32 hidden lg:block">
+                        <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Homepage-(Backup)" transform="translate(-1054.000000, -3127.000000)" fill="#001207">
+                                <g id="=-ADAPTATIONS" transform="translate(-166.000000, 2769.000000)">
+                                    <g id="geometric-square" transform="translate(1220.000000, 358.000000)">
+                                        <g id="Group-3" transform="translate(9.000000, 34.238000)">
+                                            <path
+                                                d="M6.85425,1.71145 L42.56725,7.36795 L38.20675,12.94045 L2.49325,7.28395 L6.85425,1.71145 Z M39.11575,14.21195 L44.53375,7.28845 C44.69825,7.07945 44.73875,6.79895 44.64125,6.55195 C44.54375,6.30445 44.32325,6.12745 44.06075,6.08595 L6.65325,0.16095 C6.38275,0.11795 6.11275,0.22495 5.94525,0.43945 L0.52725,7.36295 C0.36325,7.57245 0.32225,7.85245 0.41975,8.09995 C0.51675,8.34695 0.73775,8.52445 0.99975,8.56595 L38.40775,14.49095 C38.44775,14.49695 38.48725,14.49995 38.52575,14.49995 C38.75425,14.49995 38.97275,14.39545 39.11575,14.21195 L39.11575,14.21195 Z"
+                                                id="Fill-1"></path>
+                                        </g>
+                                        <path
+                                            d="M5.8372,2.38985 L14.7127,34.97335 L10.4482,40.42335 L1.5727,7.83985 L5.8372,2.38985 Z M10.7077,42.52535 L16.1257,35.60185 C16.2722,35.41535 16.3212,35.17085 16.2592,34.94235 L6.8912,0.55335 C6.8172,0.27935 6.5947,0.07085 6.3162,0.01485 C6.0387,-0.04065 5.7522,0.06485 5.5772,0.28785 L0.1597,7.21185 C0.0137,7.39835 -0.0358,7.64235 0.0262,7.87085 L9.3937,42.26035 C9.4687,42.53435 9.6912,42.74235 9.9697,42.79835 C10.0182,42.80835 10.0682,42.81335 10.1177,42.81335 C10.3457,42.81335 10.5642,42.70935 10.7077,42.52535 L10.7077,42.52535 Z"
+                                            id="Fill-4"></path>
+                                        <path
+                                            d="M7.19655,1.67255 L42.97955,7.34005 L51.91505,40.14205 L16.13155,34.47455 L7.19655,1.67255 Z M53.50155,41.56505 C53.67155,41.37555 53.73405,41.11255 53.66655,40.86755 L44.29955,6.47805 C44.22205,6.19355 43.98455,5.98055 43.69305,5.93455 L6.28555,0.00955 C6.03205,-0.03095 5.77905,0.06005 5.60955,0.24955 C5.43955,0.43905 5.37755,0.70205 5.44405,0.94705 L14.81155,35.33655 C14.88955,35.62155 15.12655,35.83405 15.41755,35.88055 L52.82605,41.80505 C52.86505,41.81155 52.90455,41.81455 52.94305,41.81455 C53.15455,41.81455 53.35805,41.72505 53.50155,41.56505 L53.50155,41.56505 Z"
+                                            id="Fill-6"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>-->
+
+                <!--<div x-show="adventure" x-cloak="" id="chi_siamo">
+                    <div class="bg-splatter lg:pb-48 pt-12">
+                        <div class="max-w-lg lg:max-w-3xl mx-auto text-center lg:pt-16 relative">
+                            <div class="relative">
+                                <div class="bg-mint h-8 lg:h-16 inset-0 w-full absolute m-auto"></div>
+                                <h2
+                                    class="font-display font-bold leading-none relative z-10 italic antialiased text-3xl lg:text-6xl">
+                                    Continue your Statamic adventure!</h2>
+                                <svg class="absolute right-8 -top-16" width="42" height="34"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path
+                                            d="M1.9 4.68l10.57 19.65.5 4.698L2.4 9.378 1.9 4.68zm12.44 28.786a.751.751 0 00.525-.796l-.92-8.644a.757.757 0 00-.085-.276L1.41.603a.75.75 0 00-1.406.435l.92 8.645c.01.096.04.19.085.276l12.45 23.146a.751.751 0 00.882.361z"
+                                            fill="#001207"></path>
+                                        <path
+                                            d="M30.224 11.562l9.001-6.908.735 6.862-25.185 19.33-.734-6.862 16.183-12.422zM14.629 32.845l26.579-20.402a.744.744 0 00.288-.67l-.92-8.605a.752.752 0 00-1.205-.512L12.794 23.057a.747.747 0 00-.289.67l.92 8.606a.748.748 0 00.747.667.75.75 0 00.458-.155z"
+                                            fill="#191A1B"></path>
+                                        <path
+                                            d="M16.777 14.698l-1.2.934-.561-1.055 1.761.12zm-.987 2.647l3.424-2.668a.748.748 0 00.254-.804.737.737 0 00-.655-.526l-5.027-.345a.735.735 0 00-.668.339.75.75 0 00-.03.755l1.603 3.012a.738.738 0 00.649.392.73.73 0 00.45-.155z"
+                                            fill="#001207"></path>
+                                        <path
+                                            d="M27.164 7.104l-11.447 8.83-5.36-9.972 16.807 1.142zm-11.23 10.558l3.488-2.691-.458-.594.458.594 10.225-7.888a.75.75 0 00-.408-1.341L9.104 4.373a.75.75 0 00-.711 1.104l6.422 11.946a.751.751 0 001.119.239zm21.81-13.437L13.44 22.971 2.053 1.8l35.69 2.426zM13.656 24.699L40.226 4.204a.75.75 0 00-.407-1.342L.8.212A.75.75 0 00.09 1.314L12.54 24.46a.748.748 0 001.117.239z"
+                                            fill="#191A1B"></path>
+                                        <path
+                                            d="M10.54 5.626l16.703 1.168-8.38 6.654-4.398-.308-3.925-7.514zm9.009 9.214L29.71 6.773a.782.782 0 00.258-.83.752.752 0 00-.662-.542L9.296 4a.74.74 0 00-.677.35.788.788 0 00-.03.78l4.758 9.11c.122.231.35.383.606.401l5.09.356a.731.731 0 00.506-.158z"
+                                            fill="#191A1B"></path>
+                                    </g>
+                                </svg>
+                                <svg class="absolute -left-8 -bottom-8" width="26" height="26"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="#001207" fill-rule="evenodd">
+                                        <path
+                                            d="M4.052 9.105c1.511 5.166 7.336 10.01 12.985 10.796 1.318.183 2.548.137 3.638-.125l-1.324 1.76c-1.115 1.48-3.224 2.126-5.788 1.768-5.119-.713-10.39-5.08-11.751-9.732-.557-1.901-.362-3.613.547-4.821l1.329-1.765c.03.68.151 1.391.364 2.119M20.55 22.438l3.679-4.886.002-.003a.75.75 0 10-1.198-.902l-.003.003c-1.115 1.478-3.224 2.122-5.785 1.766-5.12-.714-10.39-5.08-11.752-9.732-.556-1.902-.362-3.614.548-4.822A.75.75 0 004.84 2.96l-.002.003L1.161 7.85C-.041 9.444-.32 11.626.372 13.993c1.511 5.166 7.336 10.01 12.984 10.797.532.074 1.05.11 1.55.11 2.43 0 4.439-.863 5.643-2.462">
+                                        </path>
+                                        <path
+                                            d="M4.052 9.105c1.511 5.166 7.336 10.01 12.985 10.796 1.318.183 2.548.137 3.638-.125l-1.324 1.76c-1.115 1.48-3.224 2.126-5.788 1.768-5.119-.713-10.39-5.08-11.751-9.732-.557-1.901-.362-3.613.547-4.821l1.329-1.765c.03.68.151 1.391.364 2.119M20.55 22.438l3.679-4.886.002-.003a.75.75 0 10-1.198-.902l-.003.003c-1.115 1.478-3.224 2.122-5.785 1.766-5.12-.714-10.39-5.08-11.752-9.732-.556-1.902-.362-3.614.548-4.822A.75.75 0 004.84 2.96l-.002.003L1.161 7.85C-.041 9.444-.32 11.626.372 13.993c1.511 5.166 7.336 10.01 12.984 10.797.532.074 1.05.11 1.55.11 2.43 0 4.439-.863 5.643-2.462">
+                                        </path>
+                                        <path
+                                            d="M11.828 2.094c5.118.713 10.39 5.079 11.751 9.732.592 2.023.338 3.81-.716 5.03-1.148 1.329-3.195 1.898-5.62 1.56-5.118-.714-10.39-5.08-11.751-9.732-.592-2.024-.338-3.81.716-5.03C7.138 2.576 8.66 2 10.496 2c.428 0 .873.031 1.332.095m12.17 15.742c1.398-1.619 1.76-3.903 1.02-6.431-1.51-5.166-7.335-10.01-12.983-10.797C9.098.201 6.56.952 5.073 2.674c-1.398 1.618-1.76 3.902-1.02 6.43 1.51 5.167 7.335 10.01 12.984 10.797.525.073 1.037.11 1.532.11 2.278 0 4.208-.761 5.43-2.175">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="max-w-3xl pb-3 mx-auto px-3">
+                            <p class="text-center leading-none text-2xl font-hand py-8">You've only taken one trail.
+                                Curious what's down the others?</p>
+
+                        </div>
+
+
+                        <div
+                            class="flex flex-wrap items-start max-w-lg mx-auto lg:max-w-none justify-center md:lg-space-x-4 lg:space-x-20 px-4">
+                            <div class="flex flex-col flex-1 lg:flex-initial text-center items-center">
+                                <a href="/get-started" class="button-lg w-full lg:w-auto bg-yellow mb-4">I'm sold. Get
+                                    me started!</a>
+                            </div>
+                            <div class="flex flex-col flex-1 lg:flex-initial text-center items-center">
+                                <a href="#choose" class="button-lg w-full lg:w-auto bg-pink-light mb-4">Choose Another
+                                    Adventure!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+                <div x-show="adventure" x-cloak="" id="modulo">
+                    <div class="bg-splatter lg:pb-48 pt-12">
+                        <div class="max-w-lg lg:max-w-3xl mx-auto text-center lg:pt-16 relative">
+                            <div class="relative">
+                                <div class="bg-mint h-8 lg:h-16 inset-0 w-full absolute m-auto"></div>
+                                <h2
+                                    class="font-display font-bold leading-none relative z-10 italic antialiased text-3xl lg:text-6xl">
+                                    Compila il modulo e ti invieremo le migliori combinazioni per il tuo viaggio!</h2>
+                                <svg class="absolute right-8 -top-16" width="42" height="34"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path
+                                            d="M1.9 4.68l10.57 19.65.5 4.698L2.4 9.378 1.9 4.68zm12.44 28.786a.751.751 0 00.525-.796l-.92-8.644a.757.757 0 00-.085-.276L1.41.603a.75.75 0 00-1.406.435l.92 8.645c.01.096.04.19.085.276l12.45 23.146a.751.751 0 00.882.361z"
+                                            fill="#001207"></path>
+                                        <path
+                                            d="M30.224 11.562l9.001-6.908.735 6.862-25.185 19.33-.734-6.862 16.183-12.422zM14.629 32.845l26.579-20.402a.744.744 0 00.288-.67l-.92-8.605a.752.752 0 00-1.205-.512L12.794 23.057a.747.747 0 00-.289.67l.92 8.606a.748.748 0 00.747.667.75.75 0 00.458-.155z"
+                                            fill="#191A1B"></path>
+                                        <path
+                                            d="M16.777 14.698l-1.2.934-.561-1.055 1.761.12zm-.987 2.647l3.424-2.668a.748.748 0 00.254-.804.737.737 0 00-.655-.526l-5.027-.345a.735.735 0 00-.668.339.75.75 0 00-.03.755l1.603 3.012a.738.738 0 00.649.392.73.73 0 00.45-.155z"
+                                            fill="#001207"></path>
+                                        <path
+                                            d="M27.164 7.104l-11.447 8.83-5.36-9.972 16.807 1.142zm-11.23 10.558l3.488-2.691-.458-.594.458.594 10.225-7.888a.75.75 0 00-.408-1.341L9.104 4.373a.75.75 0 00-.711 1.104l6.422 11.946a.751.751 0 001.119.239zm21.81-13.437L13.44 22.971 2.053 1.8l35.69 2.426zM13.656 24.699L40.226 4.204a.75.75 0 00-.407-1.342L.8.212A.75.75 0 00.09 1.314L12.54 24.46a.748.748 0 001.117.239z"
+                                            fill="#191A1B"></path>
+                                        <path
+                                            d="M10.54 5.626l16.703 1.168-8.38 6.654-4.398-.308-3.925-7.514zm9.009 9.214L29.71 6.773a.782.782 0 00.258-.83.752.752 0 00-.662-.542L9.296 4a.74.74 0 00-.677.35.788.788 0 00-.03.78l4.758 9.11c.122.231.35.383.606.401l5.09.356a.731.731 0 00.506-.158z"
+                                            fill="#191A1B"></path>
+                                    </g>
+                                </svg>
+                                <svg class="absolute -left-8 -bottom-8" width="26" height="26"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="#001207" fill-rule="evenodd">
+                                        <path
+                                            d="M4.052 9.105c1.511 5.166 7.336 10.01 12.985 10.796 1.318.183 2.548.137 3.638-.125l-1.324 1.76c-1.115 1.48-3.224 2.126-5.788 1.768-5.119-.713-10.39-5.08-11.751-9.732-.557-1.901-.362-3.613.547-4.821l1.329-1.765c.03.68.151 1.391.364 2.119M20.55 22.438l3.679-4.886.002-.003a.75.75 0 10-1.198-.902l-.003.003c-1.115 1.478-3.224 2.122-5.785 1.766-5.12-.714-10.39-5.08-11.752-9.732-.556-1.902-.362-3.614.548-4.822A.75.75 0 004.84 2.96l-.002.003L1.161 7.85C-.041 9.444-.32 11.626.372 13.993c1.511 5.166 7.336 10.01 12.984 10.797.532.074 1.05.11 1.55.11 2.43 0 4.439-.863 5.643-2.462">
+                                        </path>
+                                        <path
+                                            d="M4.052 9.105c1.511 5.166 7.336 10.01 12.985 10.796 1.318.183 2.548.137 3.638-.125l-1.324 1.76c-1.115 1.48-3.224 2.126-5.788 1.768-5.119-.713-10.39-5.08-11.751-9.732-.557-1.901-.362-3.613.547-4.821l1.329-1.765c.03.68.151 1.391.364 2.119M20.55 22.438l3.679-4.886.002-.003a.75.75 0 10-1.198-.902l-.003.003c-1.115 1.478-3.224 2.122-5.785 1.766-5.12-.714-10.39-5.08-11.752-9.732-.556-1.902-.362-3.614.548-4.822A.75.75 0 004.84 2.96l-.002.003L1.161 7.85C-.041 9.444-.32 11.626.372 13.993c1.511 5.166 7.336 10.01 12.984 10.797.532.074 1.05.11 1.55.11 2.43 0 4.439-.863 5.643-2.462">
+                                        </path>
+                                        <path
+                                            d="M11.828 2.094c5.118.713 10.39 5.079 11.751 9.732.592 2.023.338 3.81-.716 5.03-1.148 1.329-3.195 1.898-5.62 1.56-5.118-.714-10.39-5.08-11.751-9.732-.592-2.024-.338-3.81.716-5.03C7.138 2.576 8.66 2 10.496 2c.428 0 .873.031 1.332.095m12.17 15.742c1.398-1.619 1.76-3.903 1.02-6.431-1.51-5.166-7.335-10.01-12.983-10.797C9.098.201 6.56.952 5.073 2.674c-1.398 1.618-1.76 3.902-1.02 6.43 1.51 5.167 7.335 10.01 12.984 10.797.525.073 1.037.11 1.532.11 2.278 0 4.208-.761 5.43-2.175">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!--   PUNTO D'INTERESSE PER PRIMA TIPOLOGIA DI CARD   -->
+                <!--
+                <div class="px-4 py-16 max-w-6xl mx-auto">
+                    <div class="flex flex-wrap lg:space-x-10 space-y-8 lg:space-y-0">
+                        <div
+                            class="w-full lg:w-1/3 lg:flex-1 border shadow-md font-mono py-4 px-6 relative bg-blue-lightest">
+                            <span class="font-bold text-5xl absolute -top-6 -left-4 text-shadow-mint">“</span>
+                            <p>Statamic is the <strong>BEST CMS for Laravel</strong>! Its simple control panel and easy
+                                publishing make it great for any content site. Plus, everything you already know about
+                                Laravel transfers over to Statamic so you can develop new sites and quickly add custom
+                                features.</p>
+                            <a href="https://twitter.com/ericlbarnes"
+                                class="inline-flex items-center italic mt-6 group">
+                                <img src="images/eric-barnes.jpg" alt="Eric Barnes, Owner, Laravel News" height="48"
+                                    width="48" class="rounded-full mr-4 border shadow-bleed-yellow">
+                                <p class="text-sm">
+                                    <span class="font-bold block group-hover:text-pink">Eric Barnes</span>
+                                    Owner, Laravel News
+                                </p>
+                                <p></p>
+                            </a>
+                            <span class="font-bold text-5xl absolute -bottom-6 -right-4 text-shadow-mint">”</span>
+                        </div>
+                        <div
+                            class="w-full lg:w-1/3 lg:flex-1 border shadow-md font-mono py-4 px-6 relative bg-blue-lightest">
+                            <span class="font-bold text-5xl absolute -top-6 -left-4 text-shadow-mint">“</span>
+                            <p>The Statamic team has an unwavering commitment to creating the <strong>most rad CMS of
+                                    all time</strong>.</p>
+                            <a href="https://twitter.com/taylorotwell"
+                                class="inline-flex items-center italic mt-6 group">
+                                <img src="images/taylor-otwell.jpg" alt="Taylor Otwell, Creator, Laravel" height="48"
+                                    width="48" class="rounded-full mr-4 border shadow-bleed-yellow">
+                                <p class="text-sm">
+                                    <span class="font-bold block group-hover:text-pink">Taylor Otwell</span>
+                                    Creator, Laravel
+                                </p>
+                                <p></p>
+                            </a>
+                            <span class="font-bold text-5xl absolute -bottom-6 -right-4 text-shadow-mint">”</span>
+                        </div>
+                        <div
+                            class="w-full lg:w-1/3 lg:flex-1 border shadow-md font-mono py-4 px-6 relative bg-blue-lightest">
+                            <span class="font-bold text-5xl absolute -top-6 -left-4 text-shadow-mint">“</span>
+                            <p>Overall, Statamic feels like a <strong>CMS of the future</strong>, whereas WordPress
+                                feels like a CMS of 10 years ago. I’m sold &amp; can’t wait to use it for my other
+                                sites.</p>
+                            <a href="https://usefathom.com/blog/statamic?ref=statamic.com"
+                                class="inline-flex items-center italic mt-6 group">
+                                <img src="images/paul-jarvis.jpg" alt="Paul Jarvis, Founder, Fathom Analytics"
+                                    height="48" width="48" class="rounded-full mr-4 border shadow-bleed-yellow">
+                                <p class="text-sm">
+                                    <span class="font-bold block group-hover:text-pink">Paul Jarvis</span>
+                                    Founder, Fathom Analytics
+                                </p>
+                                <p></p>
+                            </a>
+                            <span class="font-bold text-5xl absolute -bottom-6 -right-4 text-shadow-mint">”</span>
+                        </div>
+                    </div>
+
+
+                    <div class="max-w-6xl mx-auto text-right mt-4" >
+                        <a href="#" class="font-hand text-2xl text-pink hover:text-black">Read more stories →</a>
+                    </div>
+
+                </div>-->
+
+
+                <div class="max-w-3xl pb-3 mx-auto px-3 mt-10 mb-12">
+
+                    <!--   FORM   -->
+                    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border-2 border-black">
+                        <h2
+                            class="text-center font-display font-bold leading-none mt-8 mb-8 relative z-10 italic antialiased text-1xl lg:text-1xl">
+                            Cominciamo! <br><br> Su quale <b><u>Email</u></b> vuoi inviati i risultati?</h2>
+                        <div class="mb-6">
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="email" type="email" placeholder="johnny.lawrence@esempio.com">
+                        </div>
+
+                        <!--   SEZIONE   -->
+
+                        <h2
+                            class="text-center font-display font-bold leading-none mt-8 mb-8 relative z-10 italic antialiased text-1xl lg:text-1xl">
+                            Qual è il tuo <b><u>Nome</u></b>?</h2>
+                        <div class="mb-6">
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="email" type="text" placeholder="Esempio: Marco">
+                        </div>
+
+
+                        <!--   SEZIONE   -->
+
+                        <h2
+                            class="text-center font-display font-bold leading-none mt-8 mb-8 relative z-10 italic antialiased text-1xl lg:text-1xl">
+                            Quali sono le tue <i class="fa-solid fa-location-dot"></i> <b><u>Mete</u></b> preferite per
+                            questa estate?</h2>
+                        <div class="mb-6">
+
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="message" type="text" placeholder="Esempio: Madrid - Parigi - Amsterdam">
+                        </div>
+                        <br>
+
+
+                        <!--   SEZIONE   -->
+
+                        <h2
+                            class="text-center font-display font-bold leading-none  mb-8 relative z-10 italic antialiased text-1xl lg:text-1xl">
+                            In che periodo preferiresti fare il tuo viaggio low cost?</h2>
+
+
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                                <b><u>Da</u></b>:
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="message" type="date" placeholder="Esempio: 05-">
+                        </div>
+
+
+                        <!--   SEZIONE   -->
+
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                                <b><u>A</u></b>:
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="message" type="date" placeholder="Scrivi il tuo messaggio">
+                        </div>
+                        <br><br>
+
+
+                        <!--   SEZIONE   -->
+
+                        <h2
+                            class="text-center font-display font-bold leading-none  mb-8 relative z-10 italic antialiased text-1xl lg:text-1xl">
+                            Con quante <b><u>Persone</u></b> salperete all'avventura?</h2>
+
+
+                        <div class="mb-6">
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="message" type="text" placeholder="Esempio: 2">
+                        </div>
+
+                        <br>
+                        <!--   SEZIONE   -->
+
+                        <h2
+                            class="text-center font-display font-bold leading-none  mb-8 relative z-10 italic antialiased text-1xl lg:text-1xl">
+                            Indicaci un minimo ed un massimo di <b><u>Budget</u></b> a persona:</h2>
+
+
+                        <div class="mb-6">
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="message" type="text" placeholder="Esempio: 100-300">
+                        </div>
+                        <br>
+                        <div class="flex items-center justify-between">
+                            <a href="" class="button button-black"><i class="fa-solid fa-plane"></i> Invia modulo!</a>
+
+                        </div>
+                    </form>
+                </div>
+
+                <br><br><br>
+
+
+
+
+            </article>
+
+            <footer class="relative print:hidden">
+                <div class="absolute right-4 -top-8" v-pre="">
+                    <div class="flex items-center font-hand parent" x-data="{ play: false }">
+                        <div x-cloak="" x-show.transition.in.duration.1000ms.origin.right.out.duration.800="play"
+                            class="pb-1">If do right no can defense</div>
+                        <div x-on:click="$refs.defense.play(); play = true; setTimeout(() => { play = false }, 2300)">
+                            <svg class="text-black h-8 ml-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 313.47 742.77">
+                                <path fill="currentColor"
+                                    d="M88.74,41.73,91.55,35l-9.85,4-6-4.63c2.21-2.59,4.38-4.89,6.27-7.39,2.35-3.11,4.38-6.47,6.76-9.56a8.47,8.47,0,0,1,3.7-3C104.54,10.61,116.76,6.92,128.91,3a55.18,55.18,0,0,0,6.52-3c15.65,6.7,31.41,13.56,47.25,20.21,15.57,6.54,30.56,14.47,47,21.2-.3-3.13-.43-4.53-.67-7l7.28,1.48-.23-.75,13.25-2.77c.69,3.54,1.2,6.2,1.77,9.13l7.68-2c-.74,3.48-1.28,6-1.91,9l4.65,2.62c-.6,5.56-2.19,10.81-1.41,15.67s3.91,9.59,5.8,13.88l7.43,1.15,6-9.18c8.07-1.17,8.82-.84,10.94,5L298.6,76c-1.23,2.72-1.81,4.31-2.64,5.75s-2,2.94-3.93,5.66l8.54-2.13A106.3,106.3,0,0,1,303.88,97c.16.93-1.94,3-3.27,3.32a128.58,128.58,0,0,1-17.6,2.87c-2.74.21-5.61-1.28-9.12-2.18.87,3.41,1.64,6.69,2.56,9.93,2.35,8.28,4.44,16.65,7.27,24.77a129.45,129.45,0,0,0,8.58,19.65c4.71,8.55,6.28,17.8,7,27.18,1,12.18,1.5,24.42,1.66,36.64.08,6.22-.87,12.49-1.79,18.68-.19,1.34-2.91,2.19-3.38,3.62-2.28,7-4.74,14.08-6,21.32-.52,3,1.36,6.79,2.94,9.81,3.79,7.25,5.28,14-1.91,20.11-.85.73-1.18,2.35-1.31,3.6-1.58,15.39-7,29.53-13.65,43.33-1.53,3.17-1.88,6.92-2.42,9-3.38,6.08-6.35,11.07-9,16.24-2.54,5-4.17,10.53-7.16,15.21a250.72,250.72,0,0,1-15.85,22C231.17,415,219.65,427,211.6,441.64c-2.65,4.83-2.91,8.75.92,11.45,18.48,13,26.34,31.68,29.06,53.24,1.34,10.66,1.42,21.77,4.68,31.82,3.51,10.83,9.88,20.78,15.36,30.91,6.37,11.79,13.36,23.25,19.59,35.11A34.74,34.74,0,0,1,284.73,617c.34,3.82-1.28,7.5-5.74,8.82-8,2.37-15.8,3.75-24.25,1.25-3.24-1-7.75.64-11.13,2.24-8.08,3.82-16.16,5.77-25.26,4.92-10-.94-20.17-.81-30.26-.73-3.37,0-5.17-1.23-5.69-4.13s0-5.41,3.46-6.77a163.6,163.6,0,0,0,15.17-7c11.34-5.85,22.6-11.86,33.87-17.84,1.52-.8,2.93-1.83,4.18-2.62a395.32,395.32,0,0,0-34.33-77.73c-7.52-13.21-15.41-26.23-23.42-39.16-3.48-5.62-7.75-10.74-11.46-16.23a21,21,0,0,1-2.37-5.9c-1.26-4.27-2.11-8.68-3.56-12.88-1.39-4-1.06-7.39.65-11.36,5.76-13.38,11.09-26.94,16.36-40.53,1.47-3.79,2.13-7.9,3.1-11.61l-6.15-6.56,6.41-13.09c5.57-3.45,8.46-10.82,11.15-18.38,1.3-3.65,0-6-3-7.91-2.75-1.76-5.38-3.71-8.19-5.67,2.16-5.23-.33-8.41-3.75-11.15Q165.77,305.22,151,293.53a16,16,0,0,0-3.5-1.55c-3.94,17.68-13.69,31.47-24.55,44.69-7.84,9.56-17.23,18-22.09,29.79-1.69,4.12-2.47,7.85-.83,12.41,1.71,4.75,2.34,10,2.81,15.06.6,6.55-2.24,10.12-8.71,11.05a82.09,82.09,0,0,1-16.31,1.13,45.71,45.71,0,0,0-24.87,5.38c-10.09,5.35-20.7,7.59-32.16,4-3.33-1-7.36-.76-10.87-.08-7.46,1.43-8.47,1-9.88-7.42,2.25-1.55,4.59-3.37,7.12-4.88C19.9,395.52,33,388.37,45.44,380.24c8.52-5.56,15.09-13.39,20-22.43q12-21.78,24-43.51c7.84-14.18,15.6-28.4,23.56-42.52,5.52-9.8,11-19.69,17.08-29.12,6.23-9.59,12.21-11.24,22.89-6.93,17.66,7.13,35.21,14.56,52.81,21.83,1.19.49,3.1,1.47,3.63,1,4.71-4.1,9.3-1.16,14.36.56l-.33-5.77,8-5.21L221.43,236l11.62-6c-2.34-7.49-4.63-14.8-7.14-22.82-9.15,7-17.78,13.38-26.2,20-4.51,3.57-8.37,4.22-13,1.08-17.12-11.63-31.85-25.75-45.09-41.69-7.9-9.51-16.57-18.64-28.48-23.56a8.36,8.36,0,0,0-2.36-.6c-5.25-.52-10.5-1-16.59-1.53-.81,1.78-1.9,4.12-2.94,6.47-2.08,4.69-3.83,5-8.14,1.53.88-3.71,1.77-7.44,2.88-12.09-6.91,3.47-9.16,13.21-19,9.63l10.7-17.52c-6.83,1.2-11.47,8.47-20,3.51L74.56,132c11.36.71,22.57,1.28,33.74,2.25,1.94.17,4.7,1.64,5.42,3.25,4.15,9.31,12,14.2,20.44,18.77,15.59,8.43,31,17.11,46.49,25.78,2.56,1.44,4.85,3.39,7.6,5.34l28.89-18.12c1.7-9.55,11.86-14.57,17.44-24.64l-4.24-4.06c-19.5,5.08-21.68,4.61-24.67-4.64l-1,.82-11.75-14.4.8-.67-5.37-2.84c1.3-6.36,2.55-12.46,3.81-18.64l-3.87-3.43V91.46c-4.53-.09-4.06-3.16-3.81-6.24.66-8.21,1.45-16.41,1.74-24.63a9.6,9.6,0,0,0-4.72-9.13c-12.1-7.49-24-15.36-36-23-3.09-2-6.05-2.49-9.63-.13-7.5,4.94-16.27,4.94-24.89,5.58-2.74.21-5.45,2.19-7.94,3.73-1.5.94-2.5,2.65-3.8,3.93C95.42,45.38,94,45.42,88.74,41.73ZM188,78.49v9l8.73,1c.29-3.64,1.26-7,.53-10-.39-1.6-3.66-2.51-6.63-4.34.56,4.54,6.57,6.55,1.68,10.84Zm14.15,9.76,1.44,1.2c1.17-1.69,3.07-3.26,3.33-5.08.4-2.84,1.94-6.5-2.52-8.78Z">
+                                </path>
+                                <path
+                                    d="M305.61,622.78,289.82,619c8.78-2.44,15.73,1.32,23.62,3.33v11.76c0,15.82.09,31.63,0,47.45-.11,13.12-.58,26.24-.67,39.36-.05,5.61.4,11.24.71,16.85.2,3.63-1.41,5.06-5,5-39.61-.06-79.22,0-118.83-.06-4.51,0-7.83-4.9-7.85-9.39-.05-9.75-.83-19.49-1.09-29.23-.14-5.06.27-10.13.24-15.2,0-1.57-.92-3.13-1-4.72-.27-7-.13-14-.63-21-.4-5.49-4.49-9-11.18-10,8.24,7,7.75,16.42,8.36,25.12,1.38,19.83,1.89,39.73,2.68,59.6.05,1.09-.4,3.07-.87,3.15-4.12.68-8.35,1.54-12.43,1.17-1.32-.12-3.13-3.69-3.31-5.8-.68-8.09-.84-16.24-1.1-24.36-.39-12-.42-23.93-1.17-35.86-.39-6.32-2.27-12.55-2.85-18.88-.24-2.6,1.17-5.36,1.94-8.46-5.44-1.08-4.72-6.21-4.28-11.41l18-5.38.66,1.86-7.6,3.46,0,1.07c4.8.71,9.6,2,14.4,2,25.73.18,51.38-1.15,76.75-5.76,11.6-2.11,23.07-4.93,34.66-7.1C296.46,626.79,301.28,627.48,305.61,622.78Z">
+                                </path>
+                            </svg>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div
+                    class="bg-black relative overflow-hidden text-white font-mono text-xs antialiased pt-24 lg:pt-32 pb-16 px-8 lg:px-24">
+                    <svg class="absolute -left-20 -bottom-20 h-32 w-32 text-white" viewBox="0 0 186 178"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <path id="a" d="M.23.405H86.4V6H.23z"></path>
+                            <path id="c" d="M.463.441h80.185v5.454H.463z"></path>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd">
+                            <path
+                                d="M107.425 94H0c.06 1.668.193 3.334.373 5h185.249c.182-1.662.314-3.328.378-5h-78.575zM106.94 159H31a90.501 90.501 0 007.04 5h109.887a92.68 92.68 0 007.073-5h-48.061zM107.44 133H11a81.227 81.227 0 003.243 5H172.805a79.424 79.424 0 003.195-5h-68.561zM107.457 106H2c.339 1.674.757 3.34 1.218 5h180.568a72.225 72.225 0 001.214-5h-77.544zM107.473 146H19a86.33 86.33 0 004.672 5H163.26a84.626 84.626 0 004.741-5h-60.527zM107.516 120H5a75.06 75.06 0 002.16 5h172.704a75.365 75.365 0 002.136-5h-74.484z"
+                                fill="currentColor"></path>
+                            <g transform="translate(50 172)">
+                                <mask id="b" fill="#fff">
+                                    <use xlink:href="#a"></use>
+                                </mask>
+                                <path
+                                    d="M57.325.405H.231a94.875 94.875 0 0013.582 5.596H72.914A94.233 94.233 0 0086.4.405H57.325z"
+                                    fill="currentColor" mask="url(#b)"></path>
+                            </g>
+                            <path d="M107.52 32H167a86.714 86.714 0 00-4.911-5H24.882A84.01 84.01 0 0020 32h87.519z"
+                                fill="currentColor"></path>
+                            <g transform="translate(53)">
+                                <mask id="d" fill="#fff">
+                                    <use xlink:href="#c"></use>
+                                </mask>
+                                <path
+                                    d="M54.455 5.895H80.648A95.992 95.992 0 0065.388.439H15.575A94.989 94.989 0 00.463 5.895h53.992z"
+                                    fill="currentColor" mask="url(#d)"></path>
+                            </g>
+                            <path
+                                d="M107.435 19H154a91.912 91.912 0 00-7.394-5H40.419c-.3.185-.61.351-.91.536A93.833 93.833 0 0033 19H107.436zM106.966 85H186a71.113 71.113 0 00-.442-5H.446A70.812 70.812 0 000 85h106.966zM106.99 59H181a74.543 74.543 0 00-2.239-5H7.21A75.397 75.397 0 005 59h101.99zM107.471 72H185c-.372-1.674-.8-3.34-1.295-5H3.286A73.91 73.91 0 002 72h105.471zM106.99 45H175a81.26 81.26 0 00-3.345-5H14.368A79.14 79.14 0 0011 45h95.99z"
+                                fill="currentColor"></path>
+                        </g>
+                    </svg>
+
+                    <div class="max-w-6xl mx-auto flex flex-wrap justify-between pb-12 hover-within:underline-grow">
+                        <div class="w-1/2 lg:w-auto pb-12 pr-4">
+                            <h6 class="uppercase text-sm font-bold pb-4 relative">
+                                <svg class="footer-arrow" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.749 1.394l3 3a.857.857 0 010 1.212l-3 3a.857.857 0 01-1.212-1.212l1.17-1.17a.214.214 0 00-.151-.367H1.857a.857.857 0 010-1.714h7.699a.214.214 0 00.152-.366L8.537 2.606a.857.857 0 011.212-1.212z"
+                                        fill="#FFF" fill-rule="nonzero" stroke="#191A1B" stroke-width=".857"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Product <br>
+                                (Cooming Soon)
+                            </h6>
+                            <!--
+                            <ul class="space-y-2">
+                                <li><a href="/features">Features</a></li>
+                                <li><a href="/pricing">Pricing</a></li>
+                                <li><a href="/vs/wordpress">Statamic vs WordPress</a></li>
+                                <li><a href="/laravel-cms">Statamic as a Laravel CMS</a></li>
+                                <li><a href="/flat-file-cms">Statamic as a Flat File CMS</a></li>
+                                <li><a href="/roadmap">Roadmap</a></li>
+                                <li><a href="/release-notes">Release Notes</a></li>
+                                <li><a href="https://shop.statamic.com">T-Shirts 'N Stuff</a></li>
+                                <li class="opacity-50"><a href="https://v2.statamic.com">Statamic 2 (legacy)</a></li>
+                            </ul>
+                            -->
+                        </div>
+                        <div class="w-1/2 lg:w-auto pb-12 pr-4">
+                            <h6 class="uppercase text-sm font-bold pb-4 relative">
+                                <svg class="footer-arrow" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.749 1.394l3 3a.857.857 0 010 1.212l-3 3a.857.857 0 01-1.212-1.212l1.17-1.17a.214.214 0 00-.151-.367H1.857a.857.857 0 010-1.714h7.699a.214.214 0 00.152-.366L8.537 2.606a.857.857 0 011.212-1.212z"
+                                        fill="#FFF" fill-rule="nonzero" stroke="#191A1B" stroke-width=".857"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Marketplace <br>
+                                (Cooming Soon)
+                            </h6>
+                            <!--
+                            <ul class="space-y-2">
+                                <li><a href="/marketplace">What's New</a></li>
+                                <li><a href="/addons">Addons</a></li>
+                                <li><a href="/starter-kits">Starter Kits</a></li>
+                                <li><a href="/sell">Become a Seller</a></li>
+                            </ul>
+                            -->
+                        </div>
+                        <div class="w-1/2 lg:w-auto pb-12 pr-4">
+                            <h6 class="uppercase text-sm font-bold pb-4 relative">
+                                <svg class="footer-arrow" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.749 1.394l3 3a.857.857 0 010 1.212l-3 3a.857.857 0 01-1.212-1.212l1.17-1.17a.214.214 0 00-.151-.367H1.857a.857.857 0 010-1.714h7.699a.214.214 0 00.152-.366L8.537 2.606a.857.857 0 011.212-1.212z"
+                                        fill="#FFF" fill-rule="nonzero" stroke="#191A1B" stroke-width=".857"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Resources <br>
+                                (Cooming Soon)
+                            </h6>
+                            <!--
+                            <ul class="space-y-2">
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="https://statamic.dev">Documentation</a></li>
+                                <li><a href="/marketplace">Marketplace</a></li>
+                                <li><a href="/support">Support Center</a></li>
+                                <li><a href="https://builtwithstatamic.com">Showcase</a></li>
+                                <li><a href="https://github.com/statamic/cms">GitHub</a></li>
+                                <li><a href="/branding">Brand Kit</a></li>
+                            </ul>
+                            -->
+                        </div>
+                        <div class="w-1/2 lg:w-auto pb-12 pr-4">
+                            <h6 class="uppercase text-sm font-bold pb-4 relative">
+                                <svg class="footer-arrow" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.749 1.394l3 3a.857.857 0 010 1.212l-3 3a.857.857 0 01-1.212-1.212l1.17-1.17a.214.214 0 00-.151-.367H1.857a.857.857 0 010-1.714h7.699a.214.214 0 00.152-.366L8.537 2.606a.857.857 0 011.212-1.212z"
+                                        fill="#FFF" fill-rule="nonzero" stroke="#191A1B" stroke-width=".857"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Community <br>
+                                (Cooming Soon)
+                            </h6>
+                            <!--
+                            <ul class="space-y-2">
+                                <li><a href="/stories">Customer Stories</a></li>
+                                <li><a href="/partners">Partners</a></li>
+                                <li><a href="https://workwithstatamic.com">Job Board</a></li>
+                                <li><a href="https://twitter.com/statamic">Twitter</a></li>
+                                <li><a rel="me" href="https://mastodon.social/@statamic">Mastodon</a></li>
+                                <li><a href="/discord">Discord</a></li>
+                                <li><a href="https://github.com/statamic/cms/discussions">GitHub Discussions</a></li>
+                            </ul>
+                            -->
+                        </div>
+                        <div class="w-1/2 lg:w-auto pb-12 pr-4">
+                            <h6 class="uppercase text-sm font-bold pb-4 relative">
+                                <svg class="footer-arrow" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.749 1.394l3 3a.857.857 0 010 1.212l-3 3a.857.857 0 01-1.212-1.212l1.17-1.17a.214.214 0 00-.151-.367H1.857a.857.857 0 010-1.714h7.699a.214.214 0 00.152-.366L8.537 2.606a.857.857 0 011.212-1.212z"
+                                        fill="#FFF" fill-rule="nonzero" stroke="#191A1B" stroke-width=".857"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Company <br>
+                                (Cooming Soon)
+                            </h6>
+                            <!--
+                            <ul class="space-y-2">
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/license">License Agreement</a></li>
+                                <li><a href="/terms">Terms</a></li>
+                                <li><a href="/privacy">Privacy</a></li>
+                            </ul>
+                            -->
+                        </div>
+                    </div>
+
+                    <div class="max-w-6xl mx-auto flex flex-wrap items-end justify-between">
+
+                        <div id="newsletter-signup" class="lg:max-w-md">
+                            <!--
+                            <h3 class="text-2xl font-display font-bold italic antialiased mb-6">Sign up for our
+                                newsletter</h3>
+                            <p class="mb-6">A monthly firehose of news, updates, and whimsy from the weird wide world of
+                                Statamic.</p>
+                            <newsletter-form placeholder="johnny.lawrence@example.com"
+                                url="/newsletter/subscribe"></newsletter-form>
+                                -->
+                        </div>
+                        <p class="w-full pt-8 lg:w-auto lg:text-right text-2xs">© Copyright 2024 TOTUS TRAVEL, <br>All
+                            rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+
+
+    <script src="js/livewire.min.js" data-csrf="q3YdiShrkJFYEdK98mMzQ9m2MNwFbcBKuEyMRS51"
+        data-update-uri="/livewire/update" data-navigate-once="true"></script>
+
+    <script src="js/script.js" data-site="LQOVXDOL" defer=""></script>
+
+
+
+
+
+
+
+</body>
+
+</html>

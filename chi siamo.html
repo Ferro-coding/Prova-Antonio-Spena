@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Totus travel | Chi siamo</title>
+
+
+
+    <link rel="stylesheet" href="css/tailwind.css">
+
+    <link rel="stylesheet" href="css/ysf3wph.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&amp;display=swap"
+        rel="stylesheet">
+
+
+    <script src="https://kit.fontawesome.com/6faef96c61.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body class="text-black">
+    <div id="app" class="language-statamic">
+        <nav-search ref="search"></nav-search>
+        <flash-message success=""></flash-message>
+
+        <main id="main" class="">
+
+            <!--
+            <div x-data="{ hide_flatcamp_2024_banner: false }"
+                x-init="hide_flatcamp_2024_banner = Cookies.get('hide_flatcamp_2024_banner') ? (Cookies.get('hide_flatcamp_2024_banner') == 'true') : false;"
+                x-bind:class="{ 'hidden': hide_flatcamp_2024_banner, 'block': !hide_flatcamp_2024_banner }"
+                class="print:hidden py-0 bg-gradient-to-r from-pink-hot to-purple-hot overflow-hidden bg-cover z-100 shadow-lg-soft"
+                v-pre="" x-cloak="">
+                <div class="max-w-6xl 2xl:max-w-8xl mx-auto">
+                    <div class="flex justify-between items-center px-6 md:px-0">
+                        <a href="https://flatcamp.com" class="text-sm font-mono text-white">🤌 <b>Flat Camp EU 2024
+                                tickets are now available!</b> <span class="hidden md:inline-block">See what's in store
+                                in Rome, Italy this year →</span></a>
+                        <div class="flex items-center">
+                            <a class="hidden md:block button-sm flex items-center py-1 block ml-4 px-2"
+                                href="https://flatcamp.com">
+                                Learn More
+                            </a>
+                            <button
+                                class="opacity-50 hover:opacity-100 text-white text-xl p-3 ml-2 md:ml-4 -mr-2 antialised"
+                                x-on:click="hide_flatcamp_2024_banner = true; Cookies.set('hide_flatcamp_2024_banner', true, {expires: 30});">
+                                ×
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+
+
+            <nav class="print:hidden w-full px-4 z-50 at-top" id="top-nav" ref="top-nav" x-data="{ mobile_open: false }"
+                x-bind:class="{'mobile-open': mobile_open }">
+                <div class="max-w-6xl 2xl:max-w-8xl flex items-center justify-between mx-auto print:hidden relative">
+                    <!--LOGOOOOOOOOOOO-->
+                    <a id="logo" href="index.html" class="relative z-50">
+                        <span
+                            class="font-brush font-normal antialiased text-transparent leading-none py-1 bg-clip-text bg-gradient-to-r from-pink-hot to-purple-new">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </span>
+                        <span
+                            class="font-brush font-normal antialiased text-transparent leading-none py-1 bg-clip-text bg-gradient-to-r from-pink-hot to-purple-new">TOTUS
+                            TRAVEL</span>
+
+                    </a>
+
+                    <button class="md:hidden print:hidden p-2 outline-none z-10" x-show="! mobile_open"
+                        x-on:click="mobile_open = true">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 30 30" width="30" height="30">
+                            <g transform="matrix(1.25,0,0,1.25,0,0)">
+                                <path d="M2.25 18.003L21.75 18.003" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                <path d="M2.25 12.003L21.75 12.003" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                <path d="M2.25 6.003L21.75 6.003" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="md:hidden print:hidden p-2 outline-none text-black"
+                        x-bind:class="{ 'text-white': !mobile_open, 'text-black': mobile_open }" x-show="mobile_open"
+                        x-on:click="mobile_open = false">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                            viewBox="0 0 30 30" width="30" height="30">
+                            <g transform="matrix(1.25,0,0,1.25,0,0)">
+                                <path d="M0.75 23.249L23.25 0.749" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                <path d="M23.25 23.249L0.75 0.749" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                            </g>
+                        </svg>
+                    </button>
+
+
+                    <!--NAVBAR LINKS-->
+                    <div class="md:flex links px-4 md:px-0 pb-8 md:pb-0 print:hidden h-full">
+                        <ul class="font-mono font-bold text-sm flex md:items-center space-y-2 md:space-y-0">
+                            <li class="group">
+                                <a class="nav-item" href="index.html">
+                                    <span class="md:flex md:h-full items-center group-hover:text-pink">
+                                        Home
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="bg-splatter-x relative md:pt-12">
+                <article class="max-w-5xl mx-auto relative z-10 py-8 px-4">
+                    <header class="transform max-w-2xl mx-auto md:-rotate-3">
+                        <h1 class="text-5xl leading-none font-black mb-6">
+                            Chi siamo
+                        </h1>
+                    </header>
+                    <div class="markdown max-w-2xl mx-auto highlight-first-p mt-16" v-pre="">
+                        <p>Benvenuti su Totus Travel! Siamo un gruppo di viaggiatori appassionati che hanno trasformato la propria passione in una professione· Dopo anni di esplorazioni e avventure in giro per il mondo, abbiamo deciso di condividere la nostra esperienza per aiutare altri a organizzare viaggi indimenticabili e a prezzi accessibili. </p>
+                
+                        <h2>La nostra missione</h2>
+                
+                        <p>La nostra missione è semplice: rendere i viaggi accessibili a tutti. Con Totus Travel, ogni dettaglio del tuo viaggio viene curato con precisione, dal trasporto agli alloggi, assicurandoci che tu possa goderti ogni momento senza preoccupazioni.</p>
+                
+                        <p>Ci impegniamo a trovare le combinazioni di voli, hotel e trasferimenti più convenienti, offrendoti un'esperienza di viaggio a 360 gradi· Il nostro obiettivo è eliminare lo stress dell'organizzazione, permettendoti di concentrarti solo sul piacere di scoprire nuove destinazioni.</p>
+                
+                        <h3>Il nostro approccio</h3>
+                
+                        <p>Il nostro team utilizza una vasta rete di contatti e strumenti di ricerca avanzati per garantire che ogni viaggio sia perfettamente pianificato· Siamo esperti nel trovare soluzioni personalizzate che si adattano alle esigenze e al budget di ogni viaggiatore.</p>
+                
+                        <p>Che tu stia cercando una fuga romantica, un'avventura familiare o un viaggio solitario, siamo qui per rendere tutto più semplice e conveniente· La nostra esperienza diretta come viaggiatori ci permette di capire davvero cosa rende un viaggio speciale.</p>
+                
+                        <p>Grazie alla nostra dedizione e alla nostra passione, siamo diventati il punto di riferimento per chi cerca un'esperienza di viaggio completa e senza stress· Unisciti a noi e scopri quanto può essere facile e piacevole viaggiare con Totus Travel.</p>
+                    </div>
+                </article>
+                
+            </div>
+
+
+            <footer class="relative print:hidden">
+                <div class="absolute right-4 -top-8" v-pre="">
+                    <div class="flex items-center font-hand parent" x-data="{ play: false }">
+                        <div x-cloak="" x-show.transition.in.duration.1000ms.origin.right.out.duration.800="play"
+                            class="pb-1">If do right no can defense</div>
+                        <div x-on:click="$refs.defense.play(); play = true; setTimeout(() => { play = false }, 2300)">
+                            <svg class="text-black h-8 ml-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 313.47 742.77">
+                                <path fill="currentColor"
+                                    d="M88.74,41.73,91.55,35l-9.85,4-6-4.63c2.21-2.59,4.38-4.89,6.27-7.39,2.35-3.11,4.38-6.47,6.76-9.56a8.47,8.47,0,0,1,3.7-3C104.54,10.61,116.76,6.92,128.91,3a55.18,55.18,0,0,0,6.52-3c15.65,6.7,31.41,13.56,47.25,20.21,15.57,6.54,30.56,14.47,47,21.2-.3-3.13-.43-4.53-.67-7l7.28,1.48-.23-.75,13.25-2.77c.69,3.54,1.2,6.2,1.77,9.13l7.68-2c-.74,3.48-1.28,6-1.91,9l4.65,2.62c-.6,5.56-2.19,10.81-1.41,15.67s3.91,9.59,5.8,13.88l7.43,1.15,6-9.18c8.07-1.17,8.82-.84,10.94,5L298.6,76c-1.23,2.72-1.81,4.31-2.64,5.75s-2,2.94-3.93,5.66l8.54-2.13A106.3,106.3,0,0,1,303.88,97c.16.93-1.94,3-3.27,3.32a128.58,128.58,0,0,1-17.6,2.87c-2.74.21-5.61-1.28-9.12-2.18.87,3.41,1.64,6.69,2.56,9.93,2.35,8.28,4.44,16.65,7.27,24.77a129.45,129.45,0,0,0,8.58,19.65c4.71,8.55,6.28,17.8,7,27.18,1,12.18,1.5,24.42,1.66,36.64.08,6.22-.87,12.49-1.79,18.68-.19,1.34-2.91,2.19-3.38,3.62-2.28,7-4.74,14.08-6,21.32-.52,3,1.36,6.79,2.94,9.81,3.79,7.25,5.28,14-1.91,20.11-.85.73-1.18,2.35-1.31,3.6-1.58,15.39-7,29.53-13.65,43.33-1.53,3.17-1.88,6.92-2.42,9-3.38,6.08-6.35,11.07-9,16.24-2.54,5-4.17,10.53-7.16,15.21a250.72,250.72,0,0,1-15.85,22C231.17,415,219.65,427,211.6,441.64c-2.65,4.83-2.91,8.75.92,11.45,18.48,13,26.34,31.68,29.06,53.24,1.34,10.66,1.42,21.77,4.68,31.82,3.51,10.83,9.88,20.78,15.36,30.91,6.37,11.79,13.36,23.25,19.59,35.11A34.74,34.74,0,0,1,284.73,617c.34,3.82-1.28,7.5-5.74,8.82-8,2.37-15.8,3.75-24.25,1.25-3.24-1-7.75.64-11.13,2.24-8.08,3.82-16.16,5.77-25.26,4.92-10-.94-20.17-.81-30.26-.73-3.37,0-5.17-1.23-5.69-4.13s0-5.41,3.46-6.77a163.6,163.6,0,0,0,15.17-7c11.34-5.85,22.6-11.86,33.87-17.84,1.52-.8,2.93-1.83,4.18-2.62a395.32,395.32,0,0,0-34.33-77.73c-7.52-13.21-15.41-26.23-23.42-39.16-3.48-5.62-7.75-10.74-11.46-16.23a21,21,0,0,1-2.37-5.9c-1.26-4.27-2.11-8.68-3.56-12.88-1.39-4-1.06-7.39.65-11.36,5.76-13.38,11.09-26.94,16.36-40.53,1.47-3.79,2.13-7.9,3.1-11.61l-6.15-6.56,6.41-13.09c5.57-3.45,8.46-10.82,11.15-18.38,1.3-3.65,0-6-3-7.91-2.75-1.76-5.38-3.71-8.19-5.67,2.16-5.23-.33-8.41-3.75-11.15Q165.77,305.22,151,293.53a16,16,0,0,0-3.5-1.55c-3.94,17.68-13.69,31.47-24.55,44.69-7.84,9.56-17.23,18-22.09,29.79-1.69,4.12-2.47,7.85-.83,12.41,1.71,4.75,2.34,10,2.81,15.06.6,6.55-2.24,10.12-8.71,11.05a82.09,82.09,0,0,1-16.31,1.13,45.71,45.71,0,0,0-24.87,5.38c-10.09,5.35-20.7,7.59-32.16,4-3.33-1-7.36-.76-10.87-.08-7.46,1.43-8.47,1-9.88-7.42,2.25-1.55,4.59-3.37,7.12-4.88C19.9,395.52,33,388.37,45.44,380.24c8.52-5.56,15.09-13.39,20-22.43q12-21.78,24-43.51c7.84-14.18,15.6-28.4,23.56-42.52,5.52-9.8,11-19.69,17.08-29.12,6.23-9.59,12.21-11.24,22.89-6.93,17.66,7.13,35.21,14.56,52.81,21.83,1.19.49,3.1,1.47,3.63,1,4.71-4.1,9.3-1.16,14.36.56l-.33-5.77,8-5.21L221.43,236l11.62-6c-2.34-7.49-4.63-14.8-7.14-22.82-9.15,7-17.78,13.38-26.2,20-4.51,3.57-8.37,4.22-13,1.08-17.12-11.63-31.85-25.75-45.09-41.69-7.9-9.51-16.57-18.64-28.48-23.56a8.36,8.36,0,0,0-2.36-.6c-5.25-.52-10.5-1-16.59-1.53-.81,1.78-1.9,4.12-2.94,6.47-2.08,4.69-3.83,5-8.14,1.53.88-3.71,1.77-7.44,2.88-12.09-6.91,3.47-9.16,13.21-19,9.63l10.7-17.52c-6.83,1.2-11.47,8.47-20,3.51L74.56,132c11.36.71,22.57,1.28,33.74,2.25,1.94.17,4.7,1.64,5.42,3.25,4.15,9.31,12,14.2,20.44,18.77,15.59,8.43,31,17.11,46.49,25.78,2.56,1.44,4.85,3.39,7.6,5.34l28.89-18.12c1.7-9.55,11.86-14.57,17.44-24.64l-4.24-4.06c-19.5,5.08-21.68,4.61-24.67-4.64l-1,.82-11.75-14.4.8-.67-5.37-2.84c1.3-6.36,2.55-12.46,3.81-18.64l-3.87-3.43V91.46c-4.53-.09-4.06-3.16-3.81-6.24.66-8.21,1.45-16.41,1.74-24.63a9.6,9.6,0,0,0-4.72-9.13c-12.1-7.49-24-15.36-36-23-3.09-2-6.05-2.49-9.63-.13-7.5,4.94-16.27,4.94-24.89,5.58-2.74.21-5.45,2.19-7.94,3.73-1.5.94-2.5,2.65-3.8,3.93C95.42,45.38,94,45.42,88.74,41.73ZM188,78.49v9l8.73,1c.29-3.64,1.26-7,.53-10-.39-1.6-3.66-2.51-6.63-4.34.56,4.54,6.57,6.55,1.68,10.84Zm14.15,9.76,1.44,1.2c1.17-1.69,3.07-3.26,3.33-5.08.4-2.84,1.94-6.5-2.52-8.78Z">
+                                </path>
+                                <path
+                                    d="M305.61,622.78,289.82,619c8.78-2.44,15.73,1.32,23.62,3.33v11.76c0,15.82.09,31.63,0,47.45-.11,13.12-.58,26.24-.67,39.36-.05,5.61.4,11.24.71,16.85.2,3.63-1.41,5.06-5,5-39.61-.06-79.22,0-118.83-.06-4.51,0-7.83-4.9-7.85-9.39-.05-9.75-.83-19.49-1.09-29.23-.14-5.06.27-10.13.24-15.2,0-1.57-.92-3.13-1-4.72-.27-7-.13-14-.63-21-.4-5.49-4.49-9-11.18-10,8.24,7,7.75,16.42,8.36,25.12,1.38,19.83,1.89,39.73,2.68,59.6.05,1.09-.4,3.07-.87,3.15-4.12.68-8.35,1.54-12.43,1.17-1.32-.12-3.13-3.69-3.31-5.8-.68-8.09-.84-16.24-1.1-24.36-.39-12-.42-23.93-1.17-35.86-.39-6.32-2.27-12.55-2.85-18.88-.24-2.6,1.17-5.36,1.94-8.46-5.44-1.08-4.72-6.21-4.28-11.41l18-5.38.66,1.86-7.6,3.46,0,1.07c4.8.71,9.6,2,14.4,2,25.73.18,51.38-1.15,76.75-5.76,11.6-2.11,23.07-4.93,34.66-7.1C296.46,626.79,301.28,627.48,305.61,622.78Z">
+                                </path>
+                            </svg>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div
+                    class="bg-black relative overflow-hidden text-white font-mono text-xs antialiased pt-24 lg:pt-32 pb-16 px-8 lg:px-24">
+                    <svg class="absolute -left-20 -bottom-20 h-32 w-32 text-white" viewBox="0 0 186 178"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <path id="a" d="M.23.405H86.4V6H.23z"></path>
+                            <path id="c" d="M.463.441h80.185v5.454H.463z"></path>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd">
+                            <path
+                                d="M107.425 94H0c.06 1.668.193 3.334.373 5h185.249c.182-1.662.314-3.328.378-5h-78.575zM106.94 159H31a90.501 90.501 0 007.04 5h109.887a92.68 92.68 0 007.073-5h-48.061zM107.44 133H11a81.227 81.227 0 003.243 5H172.805a79.424 79.424 0 003.195-5h-68.561zM107.457 106H2c.339 1.674.757 3.34 1.218 5h180.568a72.225 72.225 0 001.214-5h-77.544zM107.473 146H19a86.33 86.33 0 004.672 5H163.26a84.626 84.626 0 004.741-5h-60.527zM107.516 120H5a75.06 75.06 0 002.16 5h172.704a75.365 75.365 0 002.136-5h-74.484z"
+                                fill="currentColor"></path>
+                            <g transform="translate(50 172)">
+                                <mask id="b" fill="#fff">
+                                    <use xlink:href="#a"></use>
+                                </mask>
+                                <path
+                                    d="M57.325.405H.231a94.875 94.875 0 0013.582 5.596H72.914A94.233 94.233 0 0086.4.405H57.325z"
+                                    fill="currentColor" mask="url(#b)"></path>
+                            </g>
+                            <path d="M107.52 32H167a86.714 86.714 0 00-4.911-5H24.882A84.01 84.01 0 0020 32h87.519z"
+                                fill="currentColor"></path>
+                            <g transform="translate(53)">
+                                <mask id="d" fill="#fff">
+                                    <use xlink:href="#c"></use>
+                                </mask>
+                                <path
+                                    d="M54.455 5.895H80.648A95.992 95.992 0 0065.388.439H15.575A94.989 94.989 0 00.463 5.895h53.992z"
+                                    fill="currentColor" mask="url(#d)"></path>
+                            </g>
+                            <path
+                                d="M107.435 19H154a91.912 91.912 0 00-7.394-5H40.419c-.3.185-.61.351-.91.536A93.833 93.833 0 0033 19H107.436zM106.966 85H186a71.113 71.113 0 00-.442-5H.446A70.812 70.812 0 000 85h106.966zM106.99 59H181a74.543 74.543 0 00-2.239-5H7.21A75.397 75.397 0 005 59h101.99zM107.471 72H185c-.372-1.674-.8-3.34-1.295-5H3.286A73.91 73.91 0 002 72h105.471zM106.99 45H175a81.26 81.26 0 00-3.345-5H14.368A79.14 79.14 0 0011 45h95.99z"
+                                fill="currentColor"></path>
+                        </g>
+                    </svg>
+
+                    <div class="max-w-6xl mx-auto flex flex-wrap justify-between pb-12 hover-within:underline-grow">
+                        <div class="w-1/2 lg:w-auto pb-12 pr-4">
+                            <h6 class="uppercase text-sm font-bold pb-4 relative">
+                                <svg class="footer-arrow" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.749 1.394l3 3a.857.857 0 010 1.212l-3 3a.857.857 0 01-1.212-1.212l1.17-1.17a.214.214 0 00-.151-.367H1.857a.857.857 0 010-1.714h7.699a.214.214 0 00.152-.366L8.537 2.606a.857.857 0 011.212-1.212z"
+                                        fill="#FFF" fill-rule="nonzero" stroke="#191A1B" stroke-width=".857"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Product <br>
+                                (Cooming Soon)
+                            </h6>
+                            <!--
+                            <ul class="space-y-2">
+                                <li><a href="/features">Features</a></li>
+                                <li><a href="/pricing">Pricing</a></li>
+                                <li><a href="/vs/wordpress">Statamic vs WordPress</a></li>
+                                <li><a href="/laravel-cms">Statamic as a Laravel CMS</a></li>
+                                <li><a href="/flat-file-cms">Statamic as a Flat File CMS</a></li>
+                                <li><a href="/roadmap">Roadmap</a></li>
+                                <li><a href="/release-notes">Release Notes</a></li>
+                                <li><a href="https://shop.statamic.com">T-Shirts 'N Stuff</a></li>
+                                <li class="opacity-50"><a href="https://v2.statamic.com">Statamic 2 (legacy)</a></li>
+                            </ul>
+                            -->
+                        </div>
+                        <div class="w-1/2 lg:w-auto pb-12 pr-4">
+                            <h6 class="uppercase text-sm font-bold pb-4 relative">
+                                <svg class="footer-arrow" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.749 1.394l3 3a.857.857 0 010 1.212l-3 3a.857.857 0 01-1.212-1.212l1.17-1.17a.214.214 0 00-.151-.367H1.857a.857.857 0 010-1.714h7.699a.214.214 0 00.152-.366L8.537 2.606a.857.857 0 011.212-1.212z"
+                                        fill="#FFF" fill-rule="nonzero" stroke="#191A1B" stroke-width=".857"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Marketplace <br>
+                                (Cooming Soon)
+                            </h6>
+                            <!--
+                            <ul class="space-y-2">
+                                <li><a href="/marketplace">What's New</a></li>
+                                <li><a href="/addons">Addons</a></li>
+                                <li><a href="/starter-kits">Starter Kits</a></li>
+                                <li><a href="/sell">Become a Seller</a></li>
+                            </ul>
+                            -->
+                        </div>
+                        <div class="w-1/2 lg:w-auto pb-12 pr-4">
+                            <h6 class="uppercase text-sm font-bold pb-4 relative">
+                                <svg class="footer-arrow" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.749 1.394l3 3a.857.857 0 010 1.212l-3 3a.857.857 0 01-1.212-1.212l1.17-1.17a.214.214 0 00-.151-.367H1.857a.857.857 0 010-1.714h7.699a.214.214 0 00.152-.366L8.537 2.606a.857.857 0 011.212-1.212z"
+                                        fill="#FFF" fill-rule="nonzero" stroke="#191A1B" stroke-width=".857"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Resources <br>
+                                (Cooming Soon)
+                            </h6>
+                            <!--
+                            <ul class="space-y-2">
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="https://statamic.dev">Documentation</a></li>
+                                <li><a href="/marketplace">Marketplace</a></li>
+                                <li><a href="/support">Support Center</a></li>
+                                <li><a href="https://builtwithstatamic.com">Showcase</a></li>
+                                <li><a href="https://github.com/statamic/cms">GitHub</a></li>
+                                <li><a href="/branding">Brand Kit</a></li>
+                            </ul>
+                            -->
+                        </div>
+                        <div class="w-1/2 lg:w-auto pb-12 pr-4">
+                            <h6 class="uppercase text-sm font-bold pb-4 relative">
+                                <svg class="footer-arrow" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.749 1.394l3 3a.857.857 0 010 1.212l-3 3a.857.857 0 01-1.212-1.212l1.17-1.17a.214.214 0 00-.151-.367H1.857a.857.857 0 010-1.714h7.699a.214.214 0 00.152-.366L8.537 2.606a.857.857 0 011.212-1.212z"
+                                        fill="#FFF" fill-rule="nonzero" stroke="#191A1B" stroke-width=".857"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Community <br>
+                                (Cooming Soon)
+                            </h6>
+                            <!--
+                            <ul class="space-y-2">
+                                <li><a href="/stories">Customer Stories</a></li>
+                                <li><a href="/partners">Partners</a></li>
+                                <li><a href="https://workwithstatamic.com">Job Board</a></li>
+                                <li><a href="https://twitter.com/statamic">Twitter</a></li>
+                                <li><a rel="me" href="https://mastodon.social/@statamic">Mastodon</a></li>
+                                <li><a href="/discord">Discord</a></li>
+                                <li><a href="https://github.com/statamic/cms/discussions">GitHub Discussions</a></li>
+                            </ul>
+                            -->
+                        </div>
+                        <div class="w-1/2 lg:w-auto pb-12 pr-4">
+                            <h6 class="uppercase text-sm font-bold pb-4 relative">
+                                <svg class="footer-arrow" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.749 1.394l3 3a.857.857 0 010 1.212l-3 3a.857.857 0 01-1.212-1.212l1.17-1.17a.214.214 0 00-.151-.367H1.857a.857.857 0 010-1.714h7.699a.214.214 0 00.152-.366L8.537 2.606a.857.857 0 011.212-1.212z"
+                                        fill="#FFF" fill-rule="nonzero" stroke="#191A1B" stroke-width=".857"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Company <br>
+                                (Cooming Soon)
+                            </h6>
+                            <!--
+                            <ul class="space-y-2">
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/license">License Agreement</a></li>
+                                <li><a href="/terms">Terms</a></li>
+                                <li><a href="/privacy">Privacy</a></li>
+                            </ul>
+                            -->
+                        </div>
+                    </div>
+
+                    <div class="max-w-6xl mx-auto flex flex-wrap items-end justify-between">
+
+                        <div id="newsletter-signup" class="lg:max-w-md">
+                            <!--
+                            <h3 class="text-2xl font-display font-bold italic antialiased mb-6">Sign up for our
+                                newsletter</h3>
+                            <p class="mb-6">A monthly firehose of news, updates, and whimsy from the weird wide world of
+                                Statamic.</p>
+                            <newsletter-form placeholder="johnny.lawrence@example.com"
+                                url="/newsletter/subscribe"></newsletter-form>
+                                -->
+                        </div>
+                        <p class="w-full pt-8 lg:w-auto lg:text-right text-2xs">© Copyright 2024 TOTUS TRAVEL, <br>All
+                            rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+  
+    <script src="js/livewire.min.js" data-csrf="1WHZeOc3YgQOJQPBmRfMnKYKWmPv31hDWgV9KIlM"
+        data-update-uri="/livewire/update" data-navigate-once="true"></script>
+
+    <script src="js/script.js" data-site="LQOVXDOL" defer=""></script>
+
+
+
+
+</body>
+
+</html>
